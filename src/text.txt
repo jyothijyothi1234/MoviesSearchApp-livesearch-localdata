@@ -1,0 +1,6 @@
+
+
+// after creating .env in package.json create root file 
+
+// after creating .env file then enter  CTRL + C & npm start in terminal then only it will work 
+

@@ -1,23 +1,41 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import {MovieList } from "./pages/MovieList"
+import {ErrorBoundaries}   from "./ErrorBoundaries"
+import {MovieDetails }  from "./data/MovieDetails";
+import {LandingPage}  from "./landingpage/LandingPage";
+import {SearchList}   from "./pages/SearchList";
 
 function App() {
+
+
+  //here this line navigating based on id total data not by components 
+  // <Route    path="/movie/:id"   element={   <MovieDetails    />}/>
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+<ErrorBoundaries >
+
+<MovieList>
+<BrowserRouter>
+    
+    <Routes>
+
+<Route     path="/"   element={   <LandingPage  />} />
+
+      <Route    path="/movie/:id"   element={   <MovieDetails    />}/>
+  
+
+
+      <Route    path="/goback"   element={   <SearchList    />}/>
+
+    </Routes>
+    </BrowserRouter>
+
+    </MovieList>
+    </ErrorBoundaries>
     </div>
   );
 }
