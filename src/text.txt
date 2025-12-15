@@ -4,3 +4,4 @@
 
 // after creating .env file then enter  CTRL + C & npm start in terminal then only it will work 
 
+//Important  think 100 times before doing code it will correct without thinking nothing will be in future j
